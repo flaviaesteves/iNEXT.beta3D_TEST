@@ -462,7 +462,7 @@ iNEXTbeta3D = function(data, diversity = 'TD', q = c(0, 1, 2), datatype = 'abund
       
       
       
-      if ( (length(level) != length(data_list)) & (by_pair == TRUE) ) level <- lapply(1:length(data_list), function(x) {
+      if (by_pair == TRUE) level <- lapply(1:length(data_list), function(x) {
         
         if (datatype == "abundance") two_idx <- combn(1:ncol(data_list[[x]]), 2)
         if (datatype == "incidence_raw") two_idx <- combn(1:length(data_list[[x]]), 2)
